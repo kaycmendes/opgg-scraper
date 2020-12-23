@@ -9,7 +9,7 @@ other packages.
 npm i opgg-scraper
 ```
 
-After installing it make sure to add the line below to your package.json file next to your app.js
+After installing it make sure to add the line below to your package.json file next to your file.js
 ```dash
 "type": "module" 
 ```
@@ -41,13 +41,14 @@ After installing it make sure to add the line below to your package.json file ne
 ```
 
 
-## Usage
+## Example
 ```javascript
 import opgg_scraper from 'opgg-scraper'
 const user = new opgg_scraper;
 user.getStats('yassuo', 'na', false).
-    then(stats => console.log(stats))     
-```json
+    then(stats => console.log(stats))   
+```  
+```javascript
 
  {
   Name: 'Yassuo',
@@ -74,16 +75,4 @@ getStats(username: string, region: string, refresh: boolean)
 
 na kr oce jp euw eune lan br las ru tr
 
-
-```
-
-
-## Paramaters
-getStats(username: string, region: string, refresh: boolean)
-
-
-
-## Regions
-
-na kr oce jp euw eune lan br las ru tr
 
