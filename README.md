@@ -9,13 +9,35 @@ other packages.
 npm i opgg-scraper
 ```
 
-## Usage 
+After installing it make sure to add the line below to your package.json file next to your file.js
+```dash
+"type": "module" 
+```
 
+
+## Usage
 ```javascript
 import opgg_scraper from 'opgg-scraper'
 const user = new opgg_scraper;
-user.getStats('hide on bush', 'br', false).then(stats => console.log(stats))    
+user.getStats('yassuo', 'na', false).
+    then(stats => console.log(stats))     
 ```
+
+<!-- {
+  Name: '[Yassuo]',
+  Level: '318',
+  ProfilePic: 'https://opgg-static.akamaized.net/images/profile_icons/profileIcon4832.jpg?image=q_auto:best&v=1518361200',
+  LastMatches: 20,
+  Wins: 8,
+  Loses: 12,
+  Rank: 'Diamond 1',
+  RankedLP: '79 LP ',
+  WinRate: '40%',
+  MainLane: 'Middle',
+  MainChampion: 'Yasuo',
+  LastTimeOnline: '20 hours ago'
+} -->
+
 
 ## Paramaters
 getStats(username: string, region: string, refresh: boolean)

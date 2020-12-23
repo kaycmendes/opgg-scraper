@@ -22,7 +22,7 @@ export default class opgg_scraper {
             } else { }
             const fetchWins = await page.$$('div.Win');
             const fetchLoses = await page.$$('div.Lose');
-            const name = await page.$eval('.Name', e => e.innerText);
+            const name = await page.$$('span.Name', e => e[1].innerText);
             const level = await page.$eval('.Level', e => e.innerText);
             const rank = await page.$eval('.TierRank', e => e.innerText);
             const pdl = await page.$eval('.LeaguePoints', e => e.innerText);
@@ -56,9 +56,3 @@ export default class opgg_scraper {
 
     }
 }
-
-
-
-
-
-
