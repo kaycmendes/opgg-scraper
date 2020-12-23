@@ -11,7 +11,7 @@ export default class opgg_scraper {
 
     async getStats(user, region, refresh) {
         try {
-            const browser = await puppeteer.launch({ headless: false });
+            const browser = await puppeteer.launch({ headless: true });
             const page = await browser.newPage();
             await page.goto(`https://${region}.op.gg/summoner/userName=${user}`)
             if (refresh === true) {
