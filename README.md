@@ -9,7 +9,7 @@ other packages.
 npm i opgg-scraper
 ```
 
-After installing it make sure to add the line below to your package.json file next to your file.js
+After installing it make sure to add the line below to your package.json file next to your app.js
 ```dash
 "type": "module" 
 ```
