@@ -5,12 +5,13 @@ other packages.
 
 ## Installation
 
-```dash
+```bash
 npm i opgg-scraper
-```
+``` 
 
 After installing it make sure to add the line below to your package.json file next to your file.js
-```dash
+
+```bash
 "type": "module" 
 ```
 
@@ -23,23 +24,6 @@ user.getStats('yassuo', 'na', false).
     then(stats => console.log(stats))     
 ```
 
-```javascript
- ## About
-
-A promised based op.gg scraper for League of Legends with a few more data than 
-other packages.
-
-## Installation
-
-```dash
-npm i opgg-scraper
-```
-
-After installing it make sure to add the line below to your package.json file next to your file.js
-```dash
-"type": "module" 
-```
-
 
 ## Example
 ```javascript
@@ -48,6 +32,7 @@ const user = new opgg_scraper;
 user.getStats('yassuo', 'na', false).
     then(stats => console.log(stats))   
 ```  
+
 ```javascript
 
  {
