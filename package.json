@@ -1,0 +1,25 @@
+{
+  "name": "opgg-scraper",
+  "version": "1.0.2",
+  "description": "A promised based op.gg scraper for League of Legends with a few more data than other packages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "league",
+    "of",
+    "legends",
+    "opgg",
+    "scraper",
+    "match",
+    "history"
+  ],
+  "author": "Kayc",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "node": "^15.4.0",
+    "puppeteer": "^5.5.0"
+  }
+}
