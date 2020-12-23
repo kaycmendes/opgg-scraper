@@ -1,6 +1,6 @@
 {
   "name": "opgg-scraper",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A promised based op.gg scraper for League of Legends with a few more data than other packages.",
   "main": "index.js",
   "scripts": {
