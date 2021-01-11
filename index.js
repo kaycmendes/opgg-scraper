@@ -8,7 +8,7 @@ puppeteer.use(AdblockerPlugin());
 
 exports.getStats = async (user, region, refresh) => {
     try {
-        const browser = await puppeteer.launch({ headless: false });
+        const browser = await puppeteer.launch({ headless: true });
         const context = browser.defaultBrowserContext();
         context.overridePermissions(`https://${region}.op.gg`, ["geolocation", "notifications"]);
         const page = await browser.newPage();
