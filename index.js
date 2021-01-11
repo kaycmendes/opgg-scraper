@@ -16,9 +16,14 @@ exports.getStats = async (user, region, refresh) => {
 
         if (refresh === true) {
             await page.click('#SummonerRefreshButton')
+            page.on('dialog', async dialog => {
+                await dialog.accept();
+            });
             await page.waitForSelector('div.GameItemList')
+            await page.waitForTimeout(2000);
         } else { }
 
+        await page.waitForTimeout(1000);
         await page.click('#right_gametype_soloranked');
         await page.waitForTimeout(2000);
 
