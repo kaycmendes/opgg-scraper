@@ -17,17 +17,19 @@ opggScraper.getStats('yassuo', 'na', false).
 // Output
  {
   Name: 'yassuo',
-  Level: '329',
+  Level: '333',
   ProfilePic: 'https://opgg-static.akamaized.net/images/profile_icons/profileIcon4073.jpg?image=q_auto:best&v=1518361200',
-  LastMatches: 3,
+  LastMatches: 4,
   Wins: 2,
-  Loses: 1,
+  Loses: 2,
   Rank: 'Master',
-  RankedLP: '1 LP ',
-  WinRate: '55%',
+  KDA: '2.02:1 KDA',
+  KDARatio: '1.82:1',
+  RankedLP: '28 LP ',
+  WinRate: '50%',
   MainLane: 'Middle',
   MainChampion: 'Yasuo',
-  LastTimeOnline: '21 hours ago'
+  LastTimeOnline: '12 minutes ago'
 }
 ```
 
