@@ -31,6 +31,8 @@ exports.getStats = async (user, region, refresh) => {
         const wins = await page.$eval('span.win', e => e.innerText).catch(() => { return 'unraked' })
         const loses = await page.$eval('span.lose', e => e.innerText).catch(() => { return 'unraked' })
         const level = await page.$eval('.Level', e => e.innerText);
+        const kda = await page.$eval('.KDA', e => e.innerText);
+        const kdaRatio = await page.$eval('.KDARatio', e => e.firstElementChild.textContent);
         const rank = await page.$eval('.TierRank', e => e.innerText);
         const pdl = await page.$eval('.LeaguePoints', e => e.innerText).catch(() => { return 'Unranked' })
         const main = await page.$$eval('.PositionStatContent .Name', e => e[0].innerHTML).catch(() => { return 'unraked' })
@@ -47,6 +49,8 @@ exports.getStats = async (user, region, refresh) => {
             'Wins': wins.length,
             'Loses': loses.length,
             'Rank': rank,
+            'KDA': kda,
+            'KDARatio': kdaRatio,
             'RankedLP': pdl,
             'WinRate': winrate,
             'MainLane': main,
