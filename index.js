@@ -12,7 +12,11 @@ exports.getStats = async (user, region, refresh) => {
         const context = browser.defaultBrowserContext();
         context.overridePermissions(`https://${region}.op.gg`, ["geolocation", "notifications"]);
         const page = await browser.newPage();
-        await page.goto(`https://${region}.op.gg/summoner/userName=${user}`)
+        if( region === 'kr'){
+             await page.goto(`https://$www.op.gg/summoner/userName=${user}`)
+        }else{
+             await page.goto(`https://${region}.op.gg/summoner/userName=${user}`)
+        }
 
         if (refresh === true) {
             await page.click('#SummonerRefreshButton')
