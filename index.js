@@ -13,7 +13,7 @@ exports.getStats = async (user, region, refresh) => {
         context.overridePermissions(`https://${region}.op.gg`, ["geolocation", "notifications"]);
         const page = await browser.newPage();
         if( region === 'kr'){
-             await page.goto(`https://$www.op.gg/summoner/userName=${user}`)
+             await page.goto(`https://www.op.gg/summoner/userName=${user}`)
         }else{
              await page.goto(`https://${region}.op.gg/summoner/userName=${user}`)
         }
