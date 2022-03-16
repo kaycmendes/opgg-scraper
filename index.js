@@ -19,31 +19,33 @@ exports.getStats = async (user, region, refresh) => {
         }
 
         if (refresh === true) {
-            await page.click('#SummonerRefreshButton')
+            
+            await page.click('.ejbh9aw1') //update button
             page.on('dialog', async dialog => {
                 await dialog.accept();
             });
-            await page.waitForSelector('div.GameItemList')
+            await page.waitForSelector('exlvoq30').catch(() => { return "player haven't played recently" }) //game list
             await page.waitForTimeout(2000);
         } else { }
 
         await page.waitForTimeout(1000);
-        await page.click('#right_gametype_soloranked');
+        await page.click('button[value="SOLORANKED"]');
         await page.waitForTimeout(2000);
 
 
-        const wins = await page.$eval('span.win', e => e.innerText).catch(() => { return 'unraked' })
-        const loses = await page.$eval('span.lose', e => e.innerText).catch(() => { return 'unraked' })
-        const level = await page.$eval('.Level', e => e.innerText);
-        const kda = await page.$eval('.KDA', e => e.innerText);
-        const kdaRatio = await page.$eval('.KDARatio', e => e.firstElementChild.textContent);
-        const rank = await page.$eval('.TierRank', e => e.innerText);
-        const pdl = await page.$eval('.LeaguePoints', e => e.innerText).catch(() => { return 'Unranked' })
-        const main = await page.$$eval('.PositionStatContent .Name', e => e[0].innerHTML).catch(() => { return 'unraked' })
-        const mainChampion = await page.$$eval('.MostChampionContent .ChampionName', e => e[0].innerText).catch(() => { return 'unraked' })
-        const winrate = await page.$eval('#GameAverageStatsBox-matches div.Text', e => e.innerText).catch(() => { return 'none' })
-        const lastTime = await page.$$eval('.TimeStamp ._timeago', e => e[0].innerText).catch(() => { return 'inactive player' })
-        const image = await page.$eval('img.ProfileImage', e => e.src);
+        const wins = await page.$eval('span.win', e => e.innerText).catch(() => { return 'unknown' })
+        const loses = await page.$eval('span.lose', e => e.innerText).catch(() => { return 'unknown' })
+        const level = await page.$eval('.level', e => e.innerText);
+        const kda = await page.$eval('.css-1mznf9n table td.kda .k-d-a', e => e.innerText).catch(() => { return 'no kd' })
+        const kdaRatio = await page.$eval('.kda-ratio', e => e.textContent).catch(() => { return 'unknown' })
+        const rank = await page.$eval('.tier-rank', e => e.innerText).catch(() => { return 'unranked' })
+        const pdl = await page.$eval('span.lp', e => e.innerText).catch(() => { return 'unknown' })
+        await page.waitForTimeout(1000);
+        const main = await page.$eval('.position-stats', e => e.children[0].children[0].children[1].children[0].innerText).catch(() => { return 'unraked' })
+        const mainChampion =await page.$eval("div.champion-box .info .name", e => e.innerText).catch(() => { return 'unknown' })
+        const winrate = await page.$eval('.chart .text', e => e.innerText).catch(() => { return 'none' })
+        const lastTime = await page.$eval('.e19epo2o2 .info div.time-stamp', e => e.innerText).catch(() => { return 'inactive player' })
+        const image = await page.$eval('.profile-icon img', e => e.src);
 
         const stats = {
             'Name': user,
