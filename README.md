@@ -35,7 +35,7 @@ na kr oce jp euw eune lan br las ru tr
   wins: 7,
   loses: 7,
   rank: 'Master',
-  kDA: '7.0 / 4.7 / 5.7',
+  kda: '7.0 / 4.7 / 5.7',
   previousRank: 'S2023 S1 Master, S2022 Diamond 1, S2021 Master',
   rankedLP: '297 LP',
   winRate: '55%',
