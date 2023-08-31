@@ -7,7 +7,7 @@ other packages.
 ## Usage
 
 ```javascript
-const opggScraper = require('opgg-scraper');
+import opggScraper from 'opgg-scraper';
 
 opggScraper('hide on bush', 'kr').
     then(stats => console.log(stats))       

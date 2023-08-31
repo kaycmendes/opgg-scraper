@@ -1,6 +1,6 @@
 {
   "name": "opgg-scraper",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A promised based op.gg scraper for League of Legends with a few more data than other packages.",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,7 @@
   "license": "ISC",
   "repository": "kaycmendes/opgg-scraper",
   "dependencies": {
-    "puppeteer-extra": "^3.1.15"
+    "puppeteer-extra": "^3.1.15",
+    "puppeteer-core":"21.1.1"
   }
 }

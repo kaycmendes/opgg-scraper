@@ -141,7 +141,7 @@ async function getStats(user, region, refresh = false, matchHistory = 1) {
       wins: wins.length,
       loses: loses.length,
       rank: rank,
-      kDA: kda,
+      kda: kda,
       previousRank: previousRank,
       rankedLP: pdl,
       winRate: winrate,
