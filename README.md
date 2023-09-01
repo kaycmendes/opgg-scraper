@@ -51,4 +51,8 @@ na kr oce jp euw eune lan br las ru tr
 }
 
 ```
+## Support
+If you find this package helpful, consider supporting its development by buying me a coffee:
+
+[![Buy Me a Coffee](https://cdn.ko-fi.com/cdn/kofi2.png?v=3)](https://ko-fi.com/kaycm)
 
