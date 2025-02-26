@@ -1,10 +1,11 @@
 {
   "name": "opgg-scraper",
-  "version": "2.0.2",
-  "description": "A promised based op.gg scraper for League of Legends with a few more data than other packages.",
+  "version": "3.0.0",
+  "description": "A promised based u.gg scraper for League of Legends with a few more data than other packages.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install-browsers": "playwright install chromium"
   },
   "type": "module",
   "keywords": [
@@ -17,10 +18,18 @@
     "history"
   ],
   "author": "Kayc",
+  "files": [
+    "index.js",
+    "LICENSE",
+    "README.md"
+  ],
   "license": "ISC",
   "repository": "kaycmendes/opgg-scraper",
   "dependencies": {
-    "puppeteer-extra": "^3.1.15",
-    "puppeteer-core":"21.1.1"
+    "playwright": "^1.40.1",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.1"
   }
 }
