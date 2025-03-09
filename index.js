@@ -34,9 +34,9 @@ async function getStats(user, region, refresh = false) {
     });
     
     const page = await context.newPage();
-    
-    // Format region for U.GG (e.g., "na" becomes "na1")
-    const uggRegion = region.endsWith('1') ? region : `${region}1`;
+
+    // Format region for U.GG (e.g., "na" becomes "na1" excluding "kr")
+    const uggRegion = region.endsWith('1') || region === 'kr' ? region : `${region}1`;
     const url = `https://u.gg/lol/profile/${uggRegion}/${formattedUser.toLowerCase()}/overview`;
     
     await page.goto(url);

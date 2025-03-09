@@ -57,7 +57,7 @@ Returns a Promise that resolves to an object containing player statistics.
 - `na1` - North America
 - `euw1` - Europe West
 - `eune1` - Europe Nordic & East
-- `kr1` - Korea
+- `kr` - Korea
 - `br1` - Brazil
 - `jp1` - Japan
 - `las1` - Latin America South
